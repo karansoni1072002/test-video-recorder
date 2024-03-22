@@ -16,7 +16,7 @@ const VideoPreview = (props) => {
   }
   return (
     <div className="text-white h-full">
-      <video id="livePreview" ref={videoRef} className="w-full h-full" autoPlay />
+      <video id="livePreview" ref={videoRef} className="h-full" autoPlay />
     </div>
   );
 
@@ -59,7 +59,7 @@ function liveStreamWrapper(previewStream, fn, status) {
 function recordedVideo(mediaBlob, status) {
   //console.log(status)
   if (status == 'stopped') {
-    return <div className=""><video className="w-full h-full" src={mediaBlob} controls></video></div>
+    return <div className=""><video className="h-full" src={mediaBlob} controls></video></div>
   }
 }
 export function VideoRecorder({ videoSaveHandler }) {
@@ -83,7 +83,7 @@ export function VideoRecorder({ videoSaveHandler }) {
       <ReactMediaRecorder
         video
         render={({ status, startRecording, stopRecording, mediaBlobUrl, previewStream }) => (
-          <div className='md:h-[35.25rem] h-full flex flex-col items-center'>
+          <div className='min-h-[35.25rem] h-full flex flex-col items-center'>
 
             <div className='flex flex-col items-center h-full'>
               {/* <div className="text-white">Status : {status}</div>
