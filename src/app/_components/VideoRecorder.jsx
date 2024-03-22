@@ -83,7 +83,7 @@ export function VideoRecorder({ videoSaveHandler }) {
       <ReactMediaRecorder
         video
         render={({ status, startRecording, stopRecording, mediaBlobUrl, previewStream }) => (
-          <div className='h-[35.25rem] flex flex-col items-center'>
+          <div className='md:h-[35.25rem] h-full flex flex-col items-center'>
 
             <div className='flex flex-col items-center h-full'>
               {/* <div className="text-white">Status : {status}</div>
